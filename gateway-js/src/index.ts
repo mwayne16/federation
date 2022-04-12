@@ -305,11 +305,11 @@ export class ApolloGateway implements GraphQLService {
   }) {
     this.logger.debug('Loading gateway...');
 
-    if (this.state.phase !== 'initialized') {
-      throw Error(
-        `ApolloGateway.load called in surprising state ${this.state.phase}`,
-      );
-    }
+   // if (this.state.phase !== 'initialized') {
+    //  throw Error(
+     //   `ApolloGateway.load called in surprising state ${this.state.phase}`,
+     // );
+   // }
     if (options?.apollo) {
       const { key, keyHash, graphRef, graphId, graphVariant } = options.apollo;
       this.apolloConfig = {
